@@ -23,10 +23,12 @@ LIGHT = HexColor("#EAF2F0")
 FONT = "Helvetica"
 BOLD = "Helvetica-Bold"
 
-team = os.getenv("GS_EQUIPE", "TemAqui (nome adotado para a entrega)")
-names = sorted(os.getenv("GS_INTEGRANTES", "Bernardo Lozório Gomes Y Gomes — RM 564943").split("|"),
+team = os.getenv("GS_EQUIPE", "TemAqui")
+roster = ("Bernardo Lozório Gomes Y Gomes — RM 564943|Caio M. Lins — RM 559805|"
+          "Guilherme Augusto Ferreira Fernandes — RM 562107|Murilo Gonzalez Bez Chleba — RM 566199")
+names = sorted(os.getenv("GS_INTEGRANTES", roster).split("|"),
                key=str.casefold)
-github = os.getenv("GS_GITHUB", "Pendente de publicação")
+github = os.getenv("GS_GITHUB", "https://github.com/MuriloBezChleba/temaqui-citizentech")
 deploy = os.getenv("GS_DEPLOY", "Pendente de provisionamento no Render")
 ddl = (root / "database" / "01_DDL.SQL").read_text()
 tables = {}
@@ -66,8 +68,6 @@ def cover(c, discipline, subtitle):
     y = paragraph(c, "<b>Integrantes</b>", 55, y, 483, 13, white) - 10
     for name in names:
         y = paragraph(c, escape(name), 55, y, 483, 13, white) - 5
-    if not os.getenv("GS_INTEGRANTES"):
-        paragraph(c, "Relação completa da equipe a confirmar.", 55, y, 483, 11, white)
     paragraph(c, "São Paulo · Liberdade · Novembro de 2026", 55, 76, 483, 11, white)
     c.showPage()
 
