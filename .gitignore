@@ -1,0 +1,6 @@
+/tmp/
+/entregas/
+/java/target/
+.env
+*.log
+

@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: temaqui-citizentech
+    runtime: docker
+    plan: free
+    dockerfilePath: ./java/Dockerfile
+    dockerContext: ./java
+    healthCheckPath: /actuator/health
+    envVars:
+      - key: ORACLE_URL
+        sync: false
+      - key: ORACLE_USER
+        sync: false
+      - key: ORACLE_PASSWORD
+        sync: false
+      - key: DEMO_KEY
+        sync: false
+
