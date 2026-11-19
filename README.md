@@ -15,7 +15,7 @@
 ## Entregas
 
 - `docs/TemAqui-Java.pdf` reúne especificação, UML, DER, telas, endpoints e execução.
-- `docs/TemAqui-Database.pdf` reúne apresentação e modelo relacional preliminar. O diagrama do Oracle Data Modeler deve ser incorporado após a exportação pela ferramenta.
+- `docs/TemAqui-Database.pdf` reúne a apresentação e o diagrama relacional exportado pelo Oracle SQL Developer Data Modeler.
 - `database/` contém os três scripts editáveis para o Oracle.
 - `java/` contém o código-fonte Spring Boot. O Blueprint de deploy fica em `render.yaml`.
 - Os exemplos usam dados fictícios produzidos para esta GS.

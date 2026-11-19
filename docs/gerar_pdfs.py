@@ -250,6 +250,8 @@ def main():
     page(c, "Database Design", 4, "Modelo lógico-relacional", note)
     if oracle_image.exists():
         c.drawImage(str(oracle_image), 55, 125, 485, 540, preserveAspectRatio=True, anchor="c", mask="auto")
+        paragraph(c, "Cardinalidade das quatro FKs no esquema: cada registro filho tem um único pai. "
+                     "Cada pai pode ter zero ou muitos registros filhos.", 55, 113, 485, 9, GRAY)
     else:
         der(c)
     c.showPage()
