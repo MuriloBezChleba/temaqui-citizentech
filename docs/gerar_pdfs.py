@@ -29,7 +29,7 @@ roster = ("Bernardo Lozório Gomes Y Gomes — RM 564943|Caio M. Lins — RM 559
 names = sorted(os.getenv("GS_INTEGRANTES", roster).split("|"),
                key=str.casefold)
 github = os.getenv("GS_GITHUB", "https://github.com/MuriloBezChleba/temaqui-citizentech")
-deploy = os.getenv("GS_DEPLOY", "Pendente de provisionamento no Render")
+deploy = os.getenv("GS_DEPLOY", "https://temaqui-citizentech.onrender.com")
 ddl = (root / "database" / "01_DDL.SQL").read_text()
 tables = {}
 for name, body in re.findall(r"CREATE TABLE (TA_\w+) \((.*?)\n\);", ddl, re.S):

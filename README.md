@@ -14,6 +14,8 @@
 
 ## Entregas
 
+API no Render: [TemAqui](https://temaqui-citizentech.onrender.com/actuator/health).
+
 - `docs/TemAqui-Java.pdf` reúne especificação, UML, DER, telas, endpoints e execução.
 - `docs/TemAqui-Database.pdf` reúne a apresentação e o diagrama relacional exportado pelo Oracle SQL Developer Data Modeler.
 - `database/` contém os três scripts editáveis para o Oracle.
