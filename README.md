@@ -30,6 +30,15 @@
 
 A chave compartilhada atende à demonstração acadêmica. Use dados fictícios. A distância é em linha reta. O protótipo Java cobre cadastro básico, publicação manual, busca, reserva e retirada. As telas de WhatsApp, OCR, planilha e relatório descrevem funcionalidades do produto no backlog Agile.
 
+Também é possível preparar o esquema pelo terminal com Java 17. Depois do build Maven, a partir da raiz no PowerShell, use o driver resolvido pelo projeto:
+
+```powershell
+$jdbc = "$env:USERPROFILE/.m2/repository/com/oracle/database/jdbc/ojdbc11/23.7.0.25.01/ojdbc11-23.7.0.25.01.jar"
+java --class-path "$jdbc" java/PrepararOracle.java instalar
+```
+
+Use o modo `verificar` se as tabelas já existirem. O utilitário conta as linhas e executa as três consultas da entrega. A instalação exige um esquema sem as tabelas do TemAqui e usa as variáveis `ORACLE_URL`, `ORACLE_USER` e `ORACLE_PASSWORD`.
+
 ## Modelo no Oracle Data Modeler
 
 1. Abra o Oracle SQL Developer Data Modeler e selecione **File → Import → DDL File**. Importe `database/01_DDL.SQL` para um modelo relacional Oracle que suporte colunas identity.

@@ -28,7 +28,7 @@ zip_checked("TemAqui-Database.zip", [
 java = [
     root / "README.md", root / "prompts.md", root / "render.yaml",
     root / "java/pom.xml", root / "java/Dockerfile", root / "java/.dockerignore",
-    root / "java/verificar-api.ps1", *sql,
+    root / "java/verificar-api.ps1", root / "java/PrepararOracle.java", *sql,
     *sorted(p for p in (root / "java/src").rglob("*") if p.is_file()),
 ]
 zip_checked("TemAqui-Java.zip", [
