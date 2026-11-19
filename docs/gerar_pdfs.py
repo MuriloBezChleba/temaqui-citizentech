@@ -23,7 +23,7 @@ LIGHT = HexColor("#EAF2F0")
 FONT = "Helvetica"
 BOLD = "Helvetica-Bold"
 
-team = os.getenv("GS_EQUIPE", "TemAqui")
+team = os.getenv("GS_EQUIPE", "Calçada LTDA")
 roster = ("Bernardo Lozório Gomes Y Gomes — RM 564943|Caio M. Lins — RM 559805|"
           "Guilherme Augusto Ferreira Fernandes — RM 562107|Murilo Gonzalez Bez Chleba — RM 566199")
 names = sorted(os.getenv("GS_INTEGRANTES", roster).split("|"),
